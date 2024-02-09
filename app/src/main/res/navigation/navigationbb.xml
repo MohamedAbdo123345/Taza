@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationbb"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.taza.activitytwo.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_datilesFragment"
+            app:destination="@id/datilesFragment" />
+        <action
+            android:id="@+id/action_home_to_search_by_nameFragment"
+            app:destination="@id/search_by_nameFragment" />
+        <action
+            android:id="@+id/action_home_to_ingredientFilterFragment"
+            app:destination="@id/ingredientFilterFragment" />
+        <action
+            android:id="@+id/action_home_to_showAreaDetailesFragment"
+            app:destination="@id/showAreaDetailesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/datilesFragment"
+        android:name="com.example.taza.activitytwo.fragment.datilesFragment"
+        android:label="fragment_datiles"
+        tools:layout="@layout/fragment_datiles" >
+        <argument
+            android:name="Data"
+            app:argType="com.example.taza.activitytwo.model.FoodRandomDTO" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.taza.activitytwo.fragment.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_to_datilesFragment"
+            app:destination="@id/datilesFragment" />
+        <action
+            android:id="@+id/action_search_to_search_by_nameFragment"
+            app:destination="@id/search_by_nameFragment"
+            />
+        <action
+            android:id="@+id/action_search_to_showAreaDetailesFragment"
+            app:destination="@id/showAreaDetailesFragment" />
+        <action
+            android:id="@+id/action_search_to_ingredientFilterFragment"
+            app:destination="@id/ingredientFilterFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/search_by_nameFragment"
+        android:name="com.example.taza.activitytwo.fragment.searchbyname.Search_by_nameFragment"
+        android:label="Search_by_nameFragment" >
+        <argument
+            android:name="Data"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_search_by_nameFragment_to_datilesFragment"
+            app:destination="@id/datilesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showAreaDetailesFragment"
+        android:name="com.example.taza.activitytwo.fragment.ShowAreaDetailesFragment"
+        android:label="fragment_show_area_detailes"
+        tools:layout="@layout/fragment_show_area_detailes" >
+        <argument
+            android:name="Data"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_showAreaDetailesFragment_to_datilesFragment"
+            app:destination="@id/datilesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientFilterFragment"
+        android:name="com.example.taza.activitytwo.fragment.IngredientFilterFragment"
+        android:label="fragment_ingredient_filter"
+        tools:layout="@layout/fragment_ingredient_filter" >
+        <argument
+            android:name="Data"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_ingredientFilterFragment_to_datilesFragment"
+            app:destination="@id/datilesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorite"
+        android:name="com.example.taza.activitytwo.fragment.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/Calendar"
+        android:name="com.example.taza.activitytwo.fragment.CalendarFragment"
+        android:label="CalendarFragment" />
+    <fragment
+        android:id="@+id/Logut"
+        android:name="com.example.taza.activitytwo.fragment.LogoutFragment"
+        android:label="fragment_logout"
+        tools:layout="@layout/fragment_logout" />
+</navigation>

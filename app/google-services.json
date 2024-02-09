@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "652489994084",
+    "project_id": "taza-2bded",
+    "storage_bucket": "taza-2bded.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652489994084:android:4d128ef401520f72379471",
+        "android_client_info": {
+          "package_name": "com.example.taza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB02a4l23EgnI3JqjQKlC1VEsGoZnxShCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
